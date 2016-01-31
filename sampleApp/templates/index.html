@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<head>
+<title> Click To Win	</title>
+<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+</head>
+
+<body>
+<div id="container">
+<h1> Click to Win</h1>
+<!-- <h2> You successfully accessed the site {{template_title}}</h2> -->
+    {% ifequal count 7 %}
+
+             <h2>Congratulations! You have just won $1,00,000. Please click the <a href="http://www.performancecentre.com">here</a> to redeem the prize</h2>
+
+    {% else %}
+    <h3>Topic :{{randomquote.topic}}</h3>
+    <h3>Quote :{{randomquote.quote}}</h3>
+    <h5>Author :{{randomquote.author}}</h5>
+    <!-- <h6>{{ip}}</h6> -->
+   {% endifequal %}
+
+</div>
+</body>
